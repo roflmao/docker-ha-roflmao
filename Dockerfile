@@ -7,4 +7,5 @@ RUN apt-get update \
   && make && make install \
   && ln -s /usr/local/lib64/libopenzwave.so /usr/lib/ \
   && ln -s /usr/local/lib64/libopenzwave.so.1.4 /usr/lib/ \
+  && pip3 install --upgrade rflink \
   && pip3 install --no-cache-dir python_openzwave==0.4.3 --upgrade --no-deps --force-reinstall --install-option="--flavor=shared"
