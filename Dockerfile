@@ -8,4 +8,5 @@ RUN apt-get update \
   && ln -s /usr/local/lib64/libopenzwave.so /usr/lib/ \
   && ln -s /usr/local/lib64/libopenzwave.so.1.4 /usr/lib/ \
   && pip3 install --upgrade rflink \
+  && sed -i 's/-c1/-c3/g' /usr/src/app/homeassistant/components/media_player/samsungtv.py \
   && pip3 install --no-cache-dir python_openzwave==0.4.3 --upgrade --no-deps --force-reinstall --install-option="--flavor=shared"
