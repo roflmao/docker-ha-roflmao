@@ -1,4 +1,4 @@
-FROM homeassistant/home-assistant:latest
+FROM homeassistant/home-assistant:0.81.6
 MAINTAINER Rolf Larsen
 
 RUN apt-get update \
